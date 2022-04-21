@@ -1,0 +1,45 @@
+a.cta, button.cta {
+    @include radius(25px);
+    
+    &.primary {
+        @include bg($neora-blue);
+        color: white;
+        padding: .55rem 1.25rem;
+        margin: .5rem;
+        transition: background .3s ease;
+        &:hover {
+            @include bg(darken($neora-blue, 5%));
+        }
+        &.hollow {
+            border: 1px solid $neora-blue;
+            background: transparent;
+            color: $neora-blue;
+            &:hover {
+                @include bg($neora-blue);
+                color:white;
+                border-color: $neora-blue;
+            }
+        }
+    }
+    &.secondary {
+        @include bg(rgba($secondary, 0.5));
+        color: white;
+        padding: .75rem 1.25rem;
+        margin: .5rem;
+        transition: background .3s ease;
+        &:hover {
+            @include bg(rgba($secondary, 0.8));
+        }
+        &.hollow {
+            border: 1px solid $secondary;
+            background: transparent;
+            color: $secondary;
+            &:hover {
+                @include bg($secondary);
+                color: white;
+                border-color: $secondary;
+            }
+        }
+    }
+}
+

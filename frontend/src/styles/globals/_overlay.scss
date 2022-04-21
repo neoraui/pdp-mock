@@ -1,0 +1,47 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    @include bg(rgba(black, 0.3));
+    @include size(100vh, 100vw);
+    @include center-flex();
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s;
+    &.show {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .modal {
+        position: relative;
+        @include size(100vh, 100vw);
+        @include bg(white);
+        padding: 1rem;
+        @include break(medium) {
+            @include size(500px, 80%);
+            max-width: 500px;
+            border-radius: .5rem;
+            box-shadow: 0 0 20px 0px rgba(black, 0.15);
+            i {
+                top: 25px!important;
+                right: 25px!important;
+            }
+        }
+        i {
+            position: absolute;
+            top: 10px;
+            right: 30px;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+    }
+}
+
+
+header, main, footer {
+    transition: filter .3s ease;
+    &.blur {
+        filter:blur(2px);
+    }
+}

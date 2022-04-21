@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- foundation css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css" crossorigin="anonymous">
+    <!-- motion UI library for foundation -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/motion-ui@1.2.3/dist/motion-ui.min.css" />
+    <!-- styles -->
+    <link rel="stylesheet" href="./frontend/dist/styles/app.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./frontend/dist/assets/favicon/favicon.png" type="image/x-icon">
+    <!-- fontawesome library -->
+    <script src="https://kit.fontawesome.com/6e358658ed.js" crossorigin="anonymous"></script>
+    <title>NeoraUI | PDP</title>
+</head>
+<body>
+
+    <div class="overlay">
+        <div class="modal">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+    </div>
+
+    <header class="">
+        <div class="utility-header">
+            <div class="wrapper">
+                <ul>
+                    <li><i class="fa-solid fa-arrow-right-to-bracket"></i></li>
+                    <li><i class="fa-solid fa-earth-americas"></i></li>
+                    <li><i class="fa-solid fa-bag-shopping"></i></li>
+                </ul>
+            </div>
+        </div>
+        <nav>
+            <div class="wrapper">
+                <ul>
+                    <li><a class="mobile" href="#"><i class="fa-solid fa-bars"></i></a></li>
+                    <li><a class="desktop" href="#">Shop</a></li>
+                    <li><a class="desktop" href="#">Products</a></li>
+                    <li><a class="desktop" href="#">PC Rewards</a></li>
+                    <li><a class="desktop" href="#">Who We Are</a></li>
+                </ul>
+    
+                <div class="logo">
+                    <img src="./frontend/dist/assets/images/logo-bug.png" alt="">
+                </div>
+    
+                <a href="#" class="cta primary desktop hollow">Find Your Brand Partner</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="">
+        <div class="wrapper">
+            <div class="pdp-main-content">
+                <div class="left">
+                    <div class="product-header-info mobile">
+                        <h1 class="mobile product-name">Product Name</h1>
+                        <div class="review-group">
+                            <ul class="star-rating"></ul>
+                            <span class="review-count"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
+                        <div class="orbit-wrapper">
+                          <div class="orbit-controls">
+                            <button class="orbit-previous"><i class="fa-solid fa-angle-left"></i></button>
+                            <button class="orbit-next"><i class="fa-solid fa-angle-right"></i></button>
+                          </div>
+                          <ul class="orbit-container">
+                            <li class="is-active orbit-slide">
+                              <figure class="orbit-figure">
+                                <img class="orbit-image" src="https://kristinrivera.neora.com/-/media/Shared/Products/Product-Images/7130.ashx" alt="Space">
+                              </figure>
+                            </li>
+                            <li class="orbit-slide">
+                              <figure class="orbit-figure">
+                                <img class="orbit-image" src="https://photofinish.neora.com/-/media/Shared/Products/Product-Images/1162.ashx" alt="Space">
+                              </figure>
+                            </li>
+                            <li class="orbit-slide">
+                              <figure class="orbit-figure">
+                                <img class="orbit-image" src="https://msmcnaughton.neora.com/-/media/Shared/Products/Product-Images/7198.ashx" alt="Space">
+                              </figure>
+                            </li>
+                            <li class="orbit-slide">
+                              <figure class="orbit-figure">
+                                <img class="orbit-image" src="https://msmcnaughton.neora.com/-/media/Shared/Products/Product-Images/9118.ashx" alt="Space">
+                              </figure>
+                            </li>
+                          </ul>
+                        </div>
+                        <nav class="orbit-bullets">
+                          <button class="is-active" data-slide="0">
+                            <span class="show-for-sr">First slide details.</span>
+                            <span class="show-for-sr" data-slide-active-label>Current Slide</span>
+                            <img src="https://kristinrivera.neora.com/-/media/Shared/Products/Product-Images/7130.ashx" alt="">
+                          </button>
+                          <button data-slide="1">
+                            <span class="show-for-sr">Second slide details.</span>
+                            <img src="https://photofinish.neora.com/-/media/Shared/Products/Product-Images/1162.ashx" alt="">
+                        </button>
+                          <button data-slide="2">
+                            <span class="show-for-sr">Third slide details.</span>
+                            <img src="https://msmcnaughton.neora.com/-/media/Shared/Products/Product-Images/7198.ashx" alt="">
+                        </button>
+                          <button data-slide="3">
+                            <span class="show-for-sr">Fourth slide details.</span>
+                            <img src="https://msmcnaughton.neora.com/-/media/Shared/Products/Product-Images/9118.ashx" alt="">
+                        </button>
+                        </nav>
+                      </div>
+                </div>
+                <div class="right">
+                    <!-- header -->
+                    <div class="product-header-info desktop">
+                        <h1 class="product-name">Product Name</h1>
+                        <div class="review-group">
+                            <ul class="star-rating"></ul>
+                            <span class="review-count"></span>
+                        </div>
+                    </div>
+                    <!-- descriptions -->
+                    <div class="product-descriptions">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum dignissimos doloremque veniam accusantium exercitationem voluptatum libero sunt minus obcaecati ipsum consequatur molestiae beatae, tempore velit.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo sunt labore dolores!
+                        </p>
+                    </div>
+                    <!-- pricing -->
+                    <div class="pricing-component">
+                        <ul>
+                            <li class="active">
+                                <div class="pricing-header smartshop">
+                                    <p>Monthly SmartShop Order</p>
+                                    <i class="fa-solid fa-circle-question order-info"></i>
+                                </div>
+                                <div class="price">
+                                    <span><sup>$</sup>80.00</span>
+                                </div>
+                                <div class="disclaimer">
+                                    <p>Save 25% (<sup>$</sup>80 value) plus free shipping over <sup>$</sup>150</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pricing-header onetime">
+                                    <p>One Time Purcahse</p>
+                                    <i class="fa-solid fa-circle-question order-info"></i>
+                                </div>
+                                <div class="price">
+                                    <span><sup>$</sup>100.00</span>
+                                </div>
+                                <div class="disclaimer">
+                                    <p>Save 25% (<sup>$</sup>80 value) plus free shipping over <sup>$</sup>150</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- add to bag component -->
+                    <div class="add-to-bag-component">
+                        <div class="count">
+                            <button>-</button>
+                            <span>1</span>
+                            <button>+</button>
+                        </div>
+                        <button class="cta primary">Add To Bag</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="">
+        <!-- footer content -->
+        <p>Footer content</p>
+    </footer>
+
+
+    
+
+    <!-- jQuery (foundation dependency) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- foundation scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js" crossorigin="anonymous"></script>
+    <!-- custom scripts -->
+    <script src="./frontend/dist/scripts/app.js"></script>
+</body>
+</html>

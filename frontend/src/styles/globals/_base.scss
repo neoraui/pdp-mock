@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    @include flex(column, nowrap, flex-start, stretch);
+    min-height: 100vh;
+    color: $primary-copy;
+}

@@ -1,0 +1,213 @@
+main {
+    .product-header-info {
+        padding: 1rem;
+        h1 {
+            font-size: 1.5rem;
+        }
+    }
+    .wrapper {
+        @include wrapper(1200px);
+        .pdp-main-content {
+            @include flex(column, nowrap, flex-start, stretch);
+            .left, .right {
+                width: 100%;
+                padding: 1rem;
+            }
+            @include break(medium) {
+                @include flex(row, nowrap, space-between, flex-start);
+                .left {
+                    width: 50%;
+                }
+                .right {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+// orbit (carousel) overrides
+$thumbnail-size: 60px;
+$button-size: 30px;
+.orbit {
+    position: relative;
+    &:hover {
+        .orbit-controls {
+            opacity: 1;
+        }
+    }
+    .orbit-controls {
+        @include flex(row, nowrap, space-between, center);
+        @include absolute-center();
+        opacity: 0;
+        z-index: 100;
+        width: 95%;
+        transition: opacity .3s;
+        button {
+            @include simple-size($button-size);
+            @include center-flex();
+            @include radius(50%);
+            @include bg(rgba($secondary, 0.3));
+            cursor: pointer;
+            position: initial;
+            top: 0; left: 0; right: 0; bottom: 0;
+            transform: none;
+            transition: background .3s ease;
+            &:hover {
+                @include bg(rgba($secondary, 0.6));
+            }
+        }
+    }
+    .orbit-bullets {
+        @include flex(row, nowrap, flex-start, center);
+        overflow: auto;
+        button {
+            @include bg(transparent);
+            @include radius(5px);
+            @include simple-size($thumbnail-size);
+            min-width: $thumbnail-size;
+            min-height: $thumbnail-size;
+            border: 1px solid transparent;
+            cursor: pointer;
+            &:hover {
+                @include bg(transparent);
+            }
+            &.is-active {
+                @include bg(transparent);
+                border-color: #ccc;
+            }
+    
+        }
+    }
+}
+ 
+// star ratings and reviews
+.review-group {
+    @include flex(row, nowrap, flex-start, center);
+    ul.star-rating {
+        margin: 0 .5rem 0 0;
+        @include flex(row, nowrap, flex-start, center);
+        li.star {
+            list-style: none;
+            color: #ddd;
+            opacity: 0.6;
+            &.rated {
+                color: $neora-blue;
+                opacity: 1;
+            }
+        }
+    }
+    .review-count {
+        font-size: .8rem;
+    }
+}
+
+
+// pricing component
+.pricing-component {
+    margin-top: 2rem;
+    ul {
+        margin: 0;
+        list-style: none;
+        @include flex(column, nowrap, flex-start, flex-start);
+        gap: .25rem;
+        li {
+            @include bg(rgb(251, 251, 251));
+            @include radius(5px);
+            cursor: pointer;
+            width: 100%;
+            padding: .5rem 1rem;
+            margin-bottom: .55rem;
+            transition: all .3s ease;
+            opacity: 0.6;
+            border: 2px solid transparent;
+            font-size: .9rem;
+            &:hover {
+                @include bg(rgb(247, 247, 247));
+                border-color: rgb(219, 219, 219);
+                opacity: 0.8
+            }
+            &:last-child {
+                margin-bottom: none;
+            }
+            &.active {
+                opacity: 1;
+                border-color: darken(#ccc, 20%);
+                border-color: $neora-blue;
+                @include bg(rgb(250, 250, 250));
+                .pricing-header p {
+                    color: $neora-blue;
+                }
+                .price {
+                    font-weight: 600;
+                    opacity: 1;
+                }
+            }
+
+            p {
+                margin: 0;
+            }
+
+            .pricing-header {
+                @include flex(row, nowrap, space-between, center);
+                position: relative;
+                i {
+                    opacity: 0.6;
+                    padding: .5rem;
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+
+                }
+                p {
+                    font-weight: 500;
+                }
+            }
+
+            .price {
+                font-size: 1.25rem;
+                opacity: 0.5;
+                margin: .24rem auto;
+                letter-spacing: 1px;
+            }
+
+            .disclaimer {
+                font-size: .9rem;
+            }
+        }
+    }
+}
+
+// add to bag component
+.add-to-bag-component {
+    @include flex(column, nowrap, space-between, stretch);
+    @include break(smedium) {
+        flex-direction: row;
+    }
+    gap: 1rem;
+    margin: 1rem auto 0;
+    .count {
+        @include flex(row, nowrap, center, center);
+        button {
+            @include radius(50%);
+            @include bg(#eee);
+            @include simple-size(50px);
+            @include center-flex();
+            cursor: pointer;
+            transition: background .3s ease;
+            font-size: 1.5rem;
+            &:hover {
+                @include bg(#ddd);
+            }
+        }
+        span {
+            margin: 0 1rem;
+            color: rgb(60, 60, 60);
+            font-size: 1.5rem;
+        }
+    }
+    button {
+        width: 100%;
+        padding: 1rem!important;
+        cursor: pointer;
+    }
+}

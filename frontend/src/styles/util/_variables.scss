@@ -1,0 +1,28 @@
+$breakpoints: (
+  // smalls
+  "small": 320px,
+  "mobile": 320px,
+  //   mediums
+  "smedium": 500px,
+  "medium": 768px,
+  "tablet": 768px,
+  //   larges
+  "large": 1024px,
+  "desktop": 1024px,
+  //   extra larges
+  "xlarge": 1200px,
+  "xxlarge": 1440px,
+  "widescreen": 1440px
+) !default;
+
+$neora-blue: #008295;
+$primary: $neora-blue;
+$secondary:  rgb(52, 55, 65);
+
+$white: white;
+$utility-header: $secondary;
+$header: $white;
+
+$primary-copy: rgb(52, 53, 55);
+
+$stars: $neora-blue;

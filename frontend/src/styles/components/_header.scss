@@ -1,0 +1,67 @@
+header {
+    @include bg(white);
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    ul {
+        @include flex(row, nowrap, flex-start, center);
+        list-style: none;
+        margin: 0;
+    }
+    .wrapper {
+        @include wrapper(1200px);
+    }
+
+    .utility-header {
+        @include bg($utility-header);
+        padding: .5rem 1rem;
+        ul {
+            @include flex(row, nowrap, flex-end, center);
+            li {
+                cursor: pointer;
+                margin-right: .75rem;
+                i {
+                    color: $white;
+                }
+                &:last-child {
+                    margin-right: none;
+                }
+            }
+        }
+        
+        
+    }
+    nav {
+        padding: .5rem 1rem;
+        position: relative;
+        .wrapper {
+            @include flex(row, nowrap, space-between, center);
+            ul {
+                margin-left: auto;
+                width: 100%;
+                li {
+                    margin: auto .25rem;
+                    .mobile {
+                        font-size: 1.33rem;
+                        margin: 0;
+                    }
+                }
+            }
+            .logo {
+                @include absolute-center();
+                @include center-flex();
+                height: 100%;
+                img {
+                    height: 70%;
+                }
+            }
+            a {
+                text-align: center;
+                padding: .25rem;
+                margin: 0;
+                width: 300px;
+            }
+        }
+    }
+}
